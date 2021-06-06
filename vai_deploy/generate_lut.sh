@@ -15,8 +15,8 @@ if [ -z "$PYNQNAME" ]; then
     PYNQNAME=pynq
 fi
 
-
 CURDIR=$(dirname "$BASH_SOURCE")
+PYTHONPATH=$PYTHONPATH:$CURDIR/../
 
 ssh $PYNQNAME "rm -rf ~/lut-workspace; mkdir ~/lut-workspace"
 scp $CURDIR/lut/lut_run.py $PYNQNAME:~/lut-workspace/
