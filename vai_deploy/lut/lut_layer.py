@@ -6,8 +6,6 @@ import os
 from ofa.utils.layers import set_layer_from_config, ResidualBlock
 from ofa.utils import MyGlobalAvgPool2d
 
-os.environ["CUDA_VISIBLE_DEVICES"]="1"
-
 import pytorch_nndct as nndct
 
 layer_name_rules = {}
